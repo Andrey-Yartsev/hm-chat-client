@@ -1,0 +1,318 @@
+.chat .form .button {
+  width: 200px;
+}
+.chat {
+  position: relative;
+  background-size: cover;
+}
+.chatHeader {
+  box-sizing: border-box;
+  height: 40px;
+  background: #fff;
+  border-bottom: 1px solid #EDEDED;
+}
+.chatHeader > .title {
+  padding: 12px 20px;
+  font-size: 14px;
+}
+.chatHeader .button {
+  padding: 12px 20px;
+  font-weight: bold;
+}
+.chatMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.chatMenu .button {
+  display: inline-block;
+}
+.chatMessages {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  height: calc(100vh - 160px);
+  overflow: auto;
+}
+.list.chatMessages li {
+  min-width: 200px;
+  float: left;
+  clear: both;
+  position: relative;
+  background: #ccc;
+  border-radius: 10px;
+  border-bottom: #999;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.list.chatMessages li.mine {
+  float: right;
+  background: #fff;
+  border-color: #fff;
+  color: #222;
+}
+.list.chatMessages li.mine .date {
+  color: #fff;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ccc;
+}
+.mine .triangle {
+  border-bottom-color: #fff;
+  right: -10px;
+}
+.list.chatMessages li:not(.mine) .triangle {
+  left: -10px;
+}
+.list.chatMessages li:not(.mine) .date {
+  left: -10px;
+  left: 10px;
+}
+
+.chat li .date {
+  font-size: 10px;
+  position: absolute;
+  bottom: -18px;
+}
+.list.chatMessages li.mine .date {
+  right: 10px;
+}
+.chat .login {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.chat .message {
+  font-size: 14px;
+}
+.chat .form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.chat .send {
+  z-index: 10;
+  position: absolute;
+  bottom: -90px;
+  right: 10px;
+  cursor: pointer;
+  background: #DD1F2D;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+.chat .send:hover {
+  background: #f62332;
+}
+.chat textarea {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+
+.cssload-thecube {
+  width: 73px;
+  height: 73px;
+  margin: 0 auto;
+  margin-top: 49px;
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  position: relative;
+  transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.cssload-thecube .cssload-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbe7f7;
+  animation: cssload-fold-thecube 2.76s infinite linear both;
+  -o-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+  -moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+  transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+}
+.cssload-thecube .cssload-c2 {
+  transform: scale(1.1) rotateZ(90deg);
+  -o-transform: scale(1.1) rotateZ(90deg);
+  -ms-transform: scale(1.1) rotateZ(90deg);
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+  -moz-transform: scale(1.1) rotateZ(90deg);
+}
+.cssload-thecube .cssload-c3 {
+  transform: scale(1.1) rotateZ(180deg);
+  -o-transform: scale(1.1) rotateZ(180deg);
+  -ms-transform: scale(1.1) rotateZ(180deg);
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+  -moz-transform: scale(1.1) rotateZ(180deg);
+}
+.cssload-thecube .cssload-c4 {
+  transform: scale(1.1) rotateZ(270deg);
+  -o-transform: scale(1.1) rotateZ(270deg);
+  -ms-transform: scale(1.1) rotateZ(270deg);
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+  -moz-transform: scale(1.1) rotateZ(270deg);
+}
+.cssload-thecube .cssload-c2:before {
+  animation-delay: 0.35s;
+  -o-animation-delay: 0.35s;
+  -ms-animation-delay: 0.35s;
+  -webkit-animation-delay: 0.35s;
+  -moz-animation-delay: 0.35s;
+}
+.cssload-thecube .cssload-c3:before {
+  animation-delay: 0.69s;
+  -o-animation-delay: 0.69s;
+  -ms-animation-delay: 0.69s;
+  -webkit-animation-delay: 0.69s;
+  -moz-animation-delay: 0.69s;
+}
+.cssload-thecube .cssload-c4:before {
+  animation-delay: 1.04s;
+  -o-animation-delay: 1.04s;
+  -ms-animation-delay: 1.04s;
+  -webkit-animation-delay: 1.04s;
+  -moz-animation-delay: 1.04s;
+}
+
+
+
+@keyframes cssload-fold-thecube {
+  0%, 10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -o-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -o-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -o-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -ms-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -ms-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -ms-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -webkit-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -moz-transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -moz-transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -moz-transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+.list.chatMessages li {
+
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-top: -3px;
+  float: left;
+  margin-left: -70px;
+  background: url(../img/operator.png) no-repeat -5px -5px;
+  background-size: 60px;
+  border-radius: 50px;
+}

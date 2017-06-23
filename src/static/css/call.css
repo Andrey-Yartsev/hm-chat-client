@@ -1,0 +1,115 @@
+.section-call .body {
+  text-align: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+.section-call .body .woman {
+  display: inline-block;
+  background: #fff url(../img/woman.png) no-repeat center center;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.section-call .body {
+  font-size: 16px;
+}
+
+.section-call .body .text {
+  padding: 20px 0;
+}
+
+.section-call .body .text span {
+  display: inline-block;
+  width: 250px;
+}
+
+.section-call {
+  background: url(../img/bg-light.png);
+}
+
+.section-call .body input[type=text] {
+  width: 250px;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 23px;
+  color: #555;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.section-call .body .input {
+  position: relative;
+  display: inline-block;
+}
+
+.section-call .body .input button {
+  font-size: 30px;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  vertical-align: middle;
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  background: #DD1F2D;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+}
+.section-call .body .input button:disabled {
+  background: #cfcdcf;
+}
+
+.appBar {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+}
+
+.appText {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.appText span {
+  display: inline-block;
+  width: 350px;
+}
+
+.getApp {
+  margin: 20px 0;
+  height: 100px;
+  display: inline-block;
+  width: 250px;
+  position: relative;
+}
+
+.qr {
+  width: 100px;
+  height: 100px;
+  background: url(../img/qr.png) no-repeat;
+  margin-right: 30px;
+  background-size: contain;
+}
+
+.googlePlay {
+  width: 122px;
+  height: 38px;
+  background: url(../img/google.png) no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.appStore {
+  width: 122px;
+  height: 38px;
+  background: url(../img/apple.png) no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

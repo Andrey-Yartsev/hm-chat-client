@@ -1,0 +1,27 @@
+.list .button {
+padding: 5px;
+border-width: 3px;
+width: 100px;
+display: inline-block;
+margin-right: 10px;
+}
+.list li {
+list-style: none;
+}
+.list ul,
+.list li {
+margin: 0;
+padding: 0;
+}
+/*
+.list li {
+margin-bottom: 10px;
+padding-bottom: 10px;
+border-bottom: 1px dashed #ccc;
+position: relative;
+}
+.list .name {
+margin-top: 5px;
+font-weight: bold;
+}
+*/

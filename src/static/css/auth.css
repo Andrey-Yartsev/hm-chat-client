@@ -1,0 +1,28 @@
+.loginForm .title {
+  color: #fff;
+}
+.loginForm .logo {
+  box-sizing: border-box;
+  padding-top: 23px;
+  display: inline-block;
+  width: 155px;
+  height: 46px;
+  background: url(../img/logo.png) no-repeat ;
+}
+.loginForm {
+  padding-top: 100px;
+  display: inline-block;
+}
+.loginForm input[type=text],
+.loginForm input[type=password] {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.loginForm .login {
+  float: left;
+  margin-right: 15px;
+}
+.loginForm .openid {
+  float: left;
+}

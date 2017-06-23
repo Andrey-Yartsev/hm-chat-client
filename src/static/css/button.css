@@ -1,0 +1,24 @@
+.button {
+cursor: pointer;
+text-decoration: none;
+text-align: center;
+display: block;
+border: 0;
+color: #fff;
+padding: 10px;
+font-size: 14px;
+background: #eb0000;
+user-select: none;
+}
+.button:hover {
+background: #ff4c3d;
+border-color: #dd2c24;
+}
+.button.blue {
+background: #8acef6;
+border-color: #3583C4;
+}
+.button.blue:hover {
+background: #c0e0f6;
+border-color: #5095ce;
+}

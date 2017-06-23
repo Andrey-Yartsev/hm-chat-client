@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-size: 12px;
+  cursor: default;
+  background: #A7A9AC url(../img/bg.png);
+}
+
+body, textarea {
+  font-family: Raleway, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/*@font-face {*/
+/*font-family: Raleway;*/
+/*src: url(../fonts/Raleway-Medium.ttf);*/
+/*}*/
+/*@font-face {*/
+/*font-family: Raleway;*/
+/*src: url(../fonts/Raleway-SemiBold.ttf);*/
+/*font-weight: bold;*/
+/*}*/
+/*@font-face {*/
+/*font-family: RalewayLight;*/
+/*src: url(../fonts/Raleway-Light.ttf);*/
+/*}*/
+.normal-font {
+  font-family: Verdana, sans-serif;
+}
+
+.pageWrapper {
+  width: 100%;
+  background: #ccc;
+}
+
+.block {
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 47px);
+}
+
+.content > div {
+  height: 100px;
+}
+
+.icon i {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url(../img/sprite.png);
+  margin-right: 7px;
+}
+
+.pageWrapper {
+  height: 100%;
+}
+
+.menu {
+  background: #fff;
+  height: 60px;
+}
+.menu a {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 60px;
+  background: no-repeat center center;
+  box-sizing: border-box;
+  border-bottom: 5px solid #fff;
+}
+.menu a.active {
+  border-bottom: 5px solid #DD1F2D;
+}
+.menu a.m-chat {
+  background-image: url(../img/menu/chat.png);
+}
+.menu a.m-call {
+  background-image: url(../img/menu/phone.png);
+}
+
+body, input, select, textarea {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.screen {
+  height: 100%;
+}
+
+.text button {
+  border: 0;
+  cursor: pointer;
+  background: #DD1F2D;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+}

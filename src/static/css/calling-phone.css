@@ -1,0 +1,130 @@
+.phone-container {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.circle-phone,
+.img-circle,
+.circle-fill,
+.img-circle-block {
+  position: absolute;
+}
+
+.img-circle {
+  background-color: #DD1F2D;
+  box-sizing: content-box;
+}
+
+.circle-phone {
+  top: -30px;
+  left: -30px;
+  box-sizing: content-box;
+  border: 2px solid #DD1F2D;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  opacity: .5;
+  animation: circle-anim 2.4s infinite ease-in-out !important;
+  transition: all 0.5s;
+}
+
+.circle-fill {
+  top: -30px;
+  left: -30px;
+  box-sizing: content-box;
+  background-color: #DD1F2D;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  animation: circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all 0.5s;
+}
+
+.img-circle {
+  box-sizing: content-box;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid transparent;
+}
+
+.img-circle-block {
+  box-sizing: content-box;
+  width: 120px;
+  height: 120px;
+  background-image: url(../img/phone.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  animation-name: tossing;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.img-circle:hover {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes circle-anim {
+  0% {
+    transform: rotate(0deg) scale(0.5) skew(1deg);
+    opacity: .1;
+  }
+  30% {
+    transform: rotate(0deg) scale(0.5) skew(1deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .1;
+  }
+}
+
+@keyframes circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(0.8) skew(1deg);
+    opacity: .2;
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: .2;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.8) skew(1deg);
+    opacity: .2;
+  }
+}
