@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import server from './server';
 
-//var http = require('http');
-
 export default (store) => {
 
   return class {
@@ -14,7 +12,6 @@ export default (store) => {
         // здесь должен быть параметр token из коллекции users БД helpme
         'Authorization': 'Bearer ' + server.hmUserToken()
       },
-
       this.options = Object.assign({
         onSuccess: null,
         onNoConnection: null,
@@ -60,7 +57,6 @@ export default (store) => {
           this.noConnection();
           return;
         }
-
         //response = JSON.parse(response);
         if (response.status.toString().charAt(0) === '4') {
           const codes = {
@@ -92,10 +88,7 @@ export default (store) => {
           this.options.onSuccess(response.data);
         }
       }).catch((e) => {
-
-
         console.log(e);
-
         let text, subText;
         if (e.code === 19) {
           this.noConnection();
@@ -110,6 +103,7 @@ export default (store) => {
         });
       });
     }
+
   };
 
 };

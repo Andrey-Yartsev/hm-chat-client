@@ -7,6 +7,7 @@ class ChatWeb extends React.Component {
 
   constructor(props) {
     super(props);
+    this.handleSendClick = this.handleSendClick.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
@@ -19,16 +20,16 @@ class ChatWeb extends React.Component {
   }
 
   handleKeyPress(e) {
-    if (e.key === 'Enter' && e.ctrlKey) this.send();
+    if (e.key === 'Enter' && e.ctrlKey) this.props.send();
+  }
+
+  handleSendClick(e) {
+    e.preventDefault();
+    this.props.send();
   }
 
   textChanged(event) {
     this.props.textChanged(event.target.value);
-  }
-
-  send(event) {
-    event.preventDefault();
-    this.props.send();
   }
 
   logout(event) {
@@ -52,7 +53,7 @@ class ChatWeb extends React.Component {
     return <div className="form">
       {this.props.state.text ?
         <div className="send"
-             onClick={this.send.bind(this)}
+             onClick={this.handleSendClick}
         >Отправить</div> : ''}
       <textarea
         onChange={this.textChanged.bind(this)}

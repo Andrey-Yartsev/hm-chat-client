@@ -75,10 +75,6 @@ class App extends Component {
     auth(this.context.store);
     this.context.store.dispatch({type: 'SCREEN_INIT'});
     this.context.store.dispatch({type: 'SECTION_INIT'});
-    this.context.store.dispatch({
-      type: 'PHONE_CHANGE',
-      phone: '+79202560776'
-    });
     this.emitter = new StatusEmitter(
       Request(this.context.store)
     );
