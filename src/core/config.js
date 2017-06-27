@@ -1,13 +1,14 @@
 var c = {
-  host: 'localhost',
+  host: '95.79.46.186',
   httpPort: 8000,
-  wsPort: 3100,
+  wsPort: 3000,
   storageSuffix: 'hmcc',
 
   hmUserToken: '4f105aa6-2f2d-4604-9e92-dda982be0147',
   hmHost: '188.227.17.99',
-  //hmPort: 8081
   hmPort: 80
+  //hmHost: 'localhost',
+  //hmPort: 1234
 };
 
 if (window.config) {

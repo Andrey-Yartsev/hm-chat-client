@@ -4,6 +4,23 @@ import '../../static/css/call.css';
 
 export default class extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.handleKeyup = this.handleKeyup.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleKeyup(e) {
+    if (e.keyCode === 13) {
+      this.props.callAndGoToScreenCalling();
+    }
+  }
+
+  handleChange(e) {
+    console.log('!');
+    this.props.phoneChanged(e.target.value);
+  }
+
   renderButton() {
     return this.props.validate() ?
       <button
@@ -29,8 +46,8 @@ export default class extends React.Component {
           value={this.props.phone.phone}
           type="text"
           placeholder="+7"
-          onChange={this.props.handleChange}
-          onKeyUp={this.props.handleKeyup}
+          onChange={this.handleChange}
+          onKeyUp={this.handleKeyup}
         />
       </div>
       <div className="appBar">

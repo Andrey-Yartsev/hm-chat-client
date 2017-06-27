@@ -4,7 +4,7 @@ import reduxConnect from '../core/utils/reduxConnect';
 import auth from '../actions/auth';
 import ucfirst from 'ucfirst';
 
-import initStatusEmitter from '../actions/status/initEmitter';
+import initStatusEmitter from '../actions/call/initEmitter';
 import StatusEmitter from '../core/utils/StatusEmitter';
 import Request from '../core/utils/ApiRequest';
 
@@ -14,6 +14,9 @@ import Calling from './Calling';
 import NoAnswer from './NoAnswer';
 import Talking from './Talking';
 import Hangup from './Hangup';
+import HappyFeedback from './HappyFeedback';
+import SadFeedback from './SadFeedback';
+import SadFeedbackComplete from './SadFeedbackComplete';
 import Error from './Error';
 
 // const callRoot = '/home/user/www/helpme-client';
@@ -75,6 +78,13 @@ class App extends Component {
     auth(this.context.store);
     this.context.store.dispatch({type: 'SCREEN_INIT'});
     this.context.store.dispatch({type: 'SECTION_INIT'});
+
+    // this.context.store.dispatch({
+    //   type: 'PHONE_CHANGE',
+    //   phone: '+71111111111'
+    // });
+
+
     this.emitter = new StatusEmitter(
       Request(this.context.store)
     );
@@ -159,6 +169,12 @@ class App extends Component {
         return <Talking/>;
       case 'Hangup':
         return <Hangup/>;
+      case 'HappyFeedback':
+        return <HappyFeedback/>;
+      case 'SadFeedback':
+        return <SadFeedback/>;
+      case 'SadFeedbackComplete':
+        return <SadFeedbackComplete/>;
       case 'Error':
         return <Error/>;
       default:
@@ -179,6 +195,13 @@ class App extends Component {
       </div>;
     } else {
       return <div className={'section-' + section + ' screen screen' + screen}>
+        <div className="header">
+          <div className="hm"></div>
+          <div className="lifeline"></div>
+          <div className="text">
+            Оперативная помощь бизнесу в 1 кнопке
+          </div>
+        </div>
         {this.renderMenu()}
         {this.renderScreen()}
       </div>;

@@ -1,0 +1,16 @@
+.feedbackButtons div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 100px;
+    margin: 0 10px;
+    cursor: pointer;
+    background: no-repeat;
+    background-size: contain;
+}
+.feedbackButtons div.like {
+    background-image: url(../img/like.png);
+}
+.feedbackButtons div.dislike {
+    background-image: url(../img/dislike.png);
+}

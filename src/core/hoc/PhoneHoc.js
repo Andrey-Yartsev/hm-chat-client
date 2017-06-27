@@ -8,24 +8,10 @@ export default (PhoneView, Request) =>
     }
 
     validate() {
-      let state = this.context.store.getState();
       if (this.props.phone.phone && this.props.phone.phone.match(/^\+[1-9]{1}[0-9]{10}$/)) {
         return true;
       }
       return false;
-    }
-
-    handleKeyup(e) {
-      if (e.keyCode === 13) {
-        this.callAndGoToScreenCalling();
-      }
-    }
-
-    handleChange(event) {
-      this.context.store.dispatch({
-        type: 'PHONE_CHANGE',
-        phone: event.target.value
-      });
     }
 
     call() {
@@ -59,12 +45,19 @@ export default (PhoneView, Request) =>
       });
     }
 
+    phoneChanged(value) {
+
+      this.context.store.dispatch({
+        type: 'PHONE_CHANGE',
+        phone: value
+      });
+    }
+
     render() {
       return <PhoneView
         {...this.props}
         validate={this.validate.bind(this)}
-        handleChange={this.handleChange.bind(this)}
-        handleKeyup={this.handleKeyup.bind(this)}
+        phoneChanged={this.phoneChanged.bind(this)}
         callAndGoToScreenCalling={this.callAndGoToScreenCalling.bind(this)}
       />;
     }

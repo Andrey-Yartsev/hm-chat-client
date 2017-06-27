@@ -31,6 +31,7 @@ export default class extends EventEmitter {
           console.info(data);
           throw new Error('wrong request: action/get?connectionId=' + this.connectionId);
         }
+        if (data.action === 'no_answer') this.stop();
         this.emit('event', data.action);
       },
       onRetry: () => {
