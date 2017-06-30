@@ -12,17 +12,8 @@ export default (success, error) => {
                 error('NO_TOKEN');
                 return;
             }
-            window.localStorage.setItem('auth' + config.storageSuffix, JSON.stringify({
-                token: r.data.token,
-                profileId: r.data.profileId,
-                login: r.data.login
-            }));
-            dispatch({
-                type: 'SET_AUTH',
-                token: r.data.token,
-                profileId: r.data.profileId,
-                login: r.data.login
-            });
+            window.localStorage.setItem('auth' + config.storageSuffix, JSON.stringify(r.data));
+            dispatch(Object.assign({type: 'SET_AUTH'}, r.data));
             if (success) success(r.data.token);
         }).catch((e) => {
             if (e.response && e.response.status === 404) {

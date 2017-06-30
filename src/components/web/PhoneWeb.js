@@ -56,8 +56,7 @@ export default class extends React.Component {
         </div>
         <div className="getApp">
           <div className="qr"></div>
-          <div className="appStore"></div>
-          <div className="googlePlay"></div>
+          <a href="https://play.google.com/store/apps/details?id=helpMe.client&hl=ru" className="googlePlay" target="blank"></a>
         </div>
       </div>
     </div>

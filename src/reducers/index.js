@@ -5,6 +5,8 @@ import messages from './messages';
 import navigation from './navigation';
 import phone from './phone';
 import call from './call';
+import settings from './settings';
+import tariff from './tariff';
 
 export default combineReducers({
   auth,
@@ -12,5 +14,7 @@ export default combineReducers({
   messages,
   navigation,
   phone,
-  call
+  call,
+  settings,
+  tariff
 })

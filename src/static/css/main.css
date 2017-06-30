@@ -66,7 +66,7 @@ html, body, #root {
 .menu a {
   display: block;
   float: left;
-  width: 50%;
+  width: 33.3%;
   height: 60px;
   background: no-repeat center center;
   box-sizing: border-box;
@@ -81,7 +81,9 @@ html, body, #root {
 .menu a.m-call {
   background-image: url(../img/menu/phone.png);
 }
-
+.menu a.m-settings {
+  background-image: url(../img/menu/settings.png);
+}
 body, input, select, textarea {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
@@ -105,9 +107,7 @@ body, input, select, textarea {
   background: #555;
 }
 
-.appBar {
-  display: none;
-}
+
 
 .header {
   background: #0099FD;
@@ -129,7 +129,7 @@ body, input, select, textarea {
   background-size: contain;
   width: 50px;
   height: 50px;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .header > .text {

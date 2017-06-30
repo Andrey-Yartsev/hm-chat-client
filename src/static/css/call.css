@@ -27,7 +27,7 @@
 }
 
 .section-call {
-  background: url(../img/bg-light.png);
+  background: #D0D1D4 url(../img/bg-light.png);
 }
 
 .section-call .body input[type=text] {

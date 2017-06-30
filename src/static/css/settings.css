@@ -1,0 +1,62 @@
+.section-settings {
+    background: #D0D1D4 url(../img/bg-light.png);
+}
+.section-settings .body {
+    padding: 20px;
+}
+.section-settings .body .item {
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+.section-settings .body .item:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.section-settings .body .item > div {
+    padding: 10px 15px;
+    float: left;
+    box-sizing: border-box;
+}
+.section-settings .body .item .title {
+    font-weight: bold;
+    width: 70%;
+    color: #0099FD;
+    font-size: 14px;
+    cursor: pointer;
+}
+.section-settings .body .item .title span {
+    border-bottom: 1px dashed #0099FD;
+}
+.section-settings .body .item .title:hover {
+    color: #000;
+}
+.section-settings .body .item .title:hover span {
+    border-color: #000;
+}
+
+.section-settings .body .item .caption {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: #0099FD;
+    width: 30%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.section-settings .body .item .caption.activate {
+    cursor: pointer;
+    background: #eb0000;
+}
+.section-settings .body .item .caption.activate:hover {
+    background: #ff4c3d;
+}
+.section-settings .body .item .description {
+    width: 100%;
+    display: none;
+}
+
+.section-settings .body .item.opened .description {
+    display: block;
+}

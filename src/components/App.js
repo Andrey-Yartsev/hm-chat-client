@@ -10,6 +10,7 @@ import Request from '../core/utils/ApiRequest';
 
 import Chat from './Chat';
 import Phone from './Phone';
+import Settings from './Settings';
 import Calling from './Calling';
 import NoAnswer from './NoAnswer';
 import Talking from './Talking';
@@ -18,18 +19,6 @@ import HappyFeedback from './HappyFeedback';
 import SadFeedback from './SadFeedback';
 import SadFeedbackComplete from './SadFeedbackComplete';
 import Error from './Error';
-
-// const callRoot = '/home/user/www/helpme-client';
-// const ScreenPhone = require(callRoot + '/ScreenPhone');
-// import ScreenTalking from callRoot + '/ScreenTalking';
-// import ScreenCalling from callRoot + '/ScreenCalling';
-// import ScreenHangup from callRoot + '/ScreenHangup';
-// import ScreenNoAnswer from callRoot + '/ScreenNoAnswer';
-// import ScreenNotAvailable from callRoot + '/ScreenNotAvailable';
-// import ScreenHappyFeedback from callRoot + '/ScreenHappyFeedback';
-// import ScreenSadFeedback from callRoot + '/ScreenSadFeedback';
-// import ScreenSadFeedbackComplete from callRoot + '/ScreenSadFeedbackComplete';
-// import ScreenError from callRoot + '/ScreenError';
 
 import '../static/css/main.css';
 import '../static/css/popup.css';
@@ -48,8 +37,12 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+  }
+
   componentDidUpdate() {
     if (window.location.hash === '#logout') {
+      console.log('Logout');
       logout(this.context.store.dispatch);
       window.location.hash = '';
       return;
@@ -114,7 +107,7 @@ class App extends Component {
   renderMenu() {
     let links = [];
     let curSection = this.context.store.getState().navigation.section;
-    const sections = ['chat', 'call'];
+    const sections = ['chat', 'call', 'settings'];
     for (let section of sections) {
       let active = curSection === section ? ' active' : '';
       links.push(<a
@@ -133,34 +126,14 @@ class App extends Component {
 
   renderScreen() {
     const screen = this.context.store.getState().navigation.screen;
+    console.log(screen);
     switch (screen) {
-      // case 'Phone':
-      //   return <ScreenPhone/>;
-      // case 'Calling':
-      //   return <ScreenCalling/>;
-      // case 'Talking':
-      //   return <ScreenTalking/>;
-      // case 'Hangup':
-      //   return <ScreenHangup/>;
-      // case 'NoAnswer':
-      //   return <ScreenNoAnswer/>;
-      // case 'NotAvailable':
-      //   return <ScreenNotAvailable/>;
-      // case 'HappyFeedback':
-      //   return <ScreenHappyFeedback/>;
-      // case 'SadFeedback':
-      //   return <ScreenSadFeedback/>;
-      // case 'SadFeedbackComplete':
-      //   return <ScreenSadFeedbackComplete/>;
-      // case 'Error':
-      //   return <ScreenError/>;
-      // default:
-      //   throw new Error('ScreenComponent for "' + name + '" is not defined');
-
       case 'Chat':
         return <Chat/>;
       case 'Phone':
         return <Phone/>;
+      case 'Settings':
+        return <Settings/>;
       case 'Calling':
         return <Calling/>;
       case 'NoAnswer':
@@ -184,6 +157,7 @@ class App extends Component {
   }
 
   render() {
+    //return <div>!!!</div>;
     const section = this.context.store.getState().navigation.section;
     const screen = this.context.store.getState().navigation.screen;
     if (!this.props.auth.token) {

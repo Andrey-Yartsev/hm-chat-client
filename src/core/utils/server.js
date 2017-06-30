@@ -16,7 +16,10 @@ export default {
 
   hmUserToken: () => {
     return config.hmUserToken;
-  }
+  },
 
+  tariffApiUrl: () => {
+    return 'http://' + config.tariffHost + ':' + config.tariffPort + '/';
+  }
 
 }
