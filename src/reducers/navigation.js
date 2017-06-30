@@ -3,7 +3,7 @@ export default (state = {}, action) => {
   switch (action.type) {
     case 'SCREEN_INIT':
       return Object.assign({}, state, {
-        screen: 'Settings',
+        screen: 'Chat',
       });
     case 'SCREEN_CHANGE':
       if (!action.screen) {
@@ -19,7 +19,7 @@ export default (state = {}, action) => {
       return Object.assign({}, state, data);
     case 'SECTION_INIT':
       return Object.assign({}, state, {
-        section: 'settings',
+        section: 'chat',
       });
     case 'SECTION_CHANGE':
       if (!action.section) {

@@ -126,7 +126,6 @@ class App extends Component {
 
   renderScreen() {
     const screen = this.context.store.getState().navigation.screen;
-    console.log(screen);
     switch (screen) {
       case 'Chat':
         return <Chat/>;
@@ -157,7 +156,6 @@ class App extends Component {
   }
 
   render() {
-    //return <div>!!!</div>;
     const section = this.context.store.getState().navigation.section;
     const screen = this.context.store.getState().navigation.screen;
     if (!this.props.auth.token) {

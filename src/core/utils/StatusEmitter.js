@@ -4,10 +4,15 @@ export default class extends EventEmitter {
 
   constructor(Request) {
     super();
+    this.started = false;
     this.Request = Request;
   }
 
+
+
   start(connectionId) {
+    if (this.started) return;
+    this.started = true;
     if (connectionId) {
       this.connectionId = connectionId;
     }
@@ -32,6 +37,7 @@ export default class extends EventEmitter {
           throw new Error('wrong request: action/get?connectionId=' + this.connectionId);
         }
         if (data.action === 'no_answer') this.stop();
+        if (data.action === 'hangup') this.stop();
         this.emit('event', data.action);
       },
       onRetry: () => {

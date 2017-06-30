@@ -17,7 +17,6 @@ export default class extends React.Component {
   }
 
   handleChange(e) {
-    console.log('!');
     this.props.phoneChanged(e.target.value);
   }
 
