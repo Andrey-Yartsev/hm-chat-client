@@ -2,7 +2,7 @@ var c = {
   host: '95.79.46.186',
   httpPort: 8000,
   wsPort: 3000,
-  storageSuffix: 'hmcc',
+  storageSuffix: 'hmcc2',
 
   hmUserToken: '4f105aa6-2f2d-4604-9e92-dda982be0147',
   hmHost: '188.227.17.99',

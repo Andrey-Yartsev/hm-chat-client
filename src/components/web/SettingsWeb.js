@@ -51,7 +51,6 @@ export default class extends React.Component {
   renderBody() {
     if (this.props.settings.openedResult) {
       return <div
-        className="content"
         dangerouslySetInnerHTML={{__html: this.props.settings.openedResult}}>
       </div>
     } else {
