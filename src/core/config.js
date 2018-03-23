@@ -1,5 +1,5 @@
 var c = {
-  host: '95.79.46.186',
+  host: 'localhost',
   httpPort: 8000,
   wsPort: 3000,
   storageSuffix: 'hmcc2',
